@@ -70,7 +70,7 @@ function uploadMultipart(absoluteFilePath, fileName, uploadCb) {
 }
 
 function uploadFile(s3_key, absoluteFilePath, uploadCb) {
-  //var fileName = path.basename(absoluteFilePath);
+  var fileName = path.basename(absoluteFilePath);
   var stats = fs.statSync(absoluteFilePath)
   var fileSizeInBytes = stats["size"]
 
